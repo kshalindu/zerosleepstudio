@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero Sleep Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('open');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Zero Sleep Studio</h1>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="background.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>Hi, I’m a Game Developer</h2>
+      <p>I’m a Gameplay Programmer</p>
+      <div class="hero-line"></div>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="card">
+      <img src="images/ss1.jpg" alt="Project 1 screenshot" class="project-img" />
+      <h3>Project One</h3>
+      <p>A short description of the project.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/ss2.jpg" alt="Project 2 screenshot" class="project-img" />
+      <h3>Project Two</h3>
+      <p>Another cool project description.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I’m lazy.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: zerosleepstudio@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Zero Sleep Studio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
