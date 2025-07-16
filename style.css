@@ -24,7 +24,7 @@ header {
   width: 100%;
   top: 0;
   background: black;
-  color: var(--accent);
+  color: white!important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@ header {
 
 header h1 {
   font-size: 0.8rem;
-  color: white;
+  color: white!important;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -45,7 +45,7 @@ header h1 {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--accent);
+  color: white!important;
 }
 
 nav {
@@ -54,7 +54,7 @@ nav {
 }
 
 nav a {
-  color: var(--gray);
+  color: white!important;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -96,7 +96,8 @@ nav a:hover {
 
 .hero-content {
   z-index: 1;
-  color: var(--fg);
+  color: white!important;
+  
 }
 
 .hero-content h2 {
@@ -104,21 +105,23 @@ nav a:hover {
   font-weight: 1000;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  color: white!important;
 }
 
 .hero-content p {
   font-size: 1.3rem;
   font-weight: 400;
-  color: var(--gray);
+  color: white!important;
   margin-top: 0.5rem;
 }
 
 .hero-line {
   width: 120px;
   height: 4px;
-  background: var(--accent);
+  background: white!important;
   margin: 1.5rem auto 0;
   border-radius: 2px;
+  color: white!important;
 }
 
 .btn {
@@ -126,8 +129,8 @@ nav a:hover {
   margin-top: 2rem;
   padding: 0.7rem 1.5rem;
   background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
+  color: white!important;
+  border: 2px solid white!important;
   border-radius: 100px;
   text-decoration: none;
   font-weight: 600;
@@ -206,4 +209,61 @@ footer {
   .hero-content p {
     font-size: 1rem;
   }
+}
+/* Light mode support */
+body.light {
+  --bg: #fff;
+  --fg: #000;
+  --accent: #000;
+  --gray: #555;
+  --card: #f2f2f2;
+}
+
+body.light nav a {
+  color: var(--gray);
+}
+body.light nav a:hover {
+  color: var(--accent);
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+nav button.dark-toggle {
+  padding: 0;
+  margin-left: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1c1c1c;
+  color: white;
+  font-size: 1rem;
+}
+
+body.light input,
+body.light textarea {
+  background: #eaeaea;
+  color: #000;
+}
+
+form button.btn {
+  width: 100%;
+}
+
+.project-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
